@@ -1,0 +1,57 @@
+html
+    head
+        title VR Scribble Viewer
+        script(src="https://apis.google.com/js/platform.js" async defer)
+        script(src="//connect.facebook.net/en_US/sdk.js" async defer)
+        meta(name="google-signin-client_id" content=googleClientId)
+        script(src="/lib/webvr-polyfill.js")
+        script(src="/lib/three.min.js")
+        script(src="/lib/VREffect.js")
+        script(src="/lib/StereoEffect.js")
+        script(src="/lib/vr-samples-util.js")
+        script(src="/lib/OrbitControls.js")
+        script(src="/lib/VRControls.js")
+        script(src="/lib/DeviceOrientationControls.js")
+        script(src="/lib/NoSleep.min.js")
+        //- script(src="/src/viewScript.js")
+        script(src="/dev/Stroke.js")
+        script(src="/dev/User.js")
+        script(src="/dev/InterfaceBox.js")
+        script(src="/dev/Graphics.js")
+        script(src="/dev/Interface.js")
+        script(src="/dev/view.js")
+        meta(charset="UTF-8")
+    style.
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #splash{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #333;
+            color: white;
+            font-size: 5vh;
+        }
+
+        #splashText{
+            text-align: center;
+            font-family: Helvetica;
+            width: 80vw;
+        }
+
+        #vr-sample-button-container {
+            top: 10px;
+            right: auto !important;
+        }
+
+        #signInButton{
+            display: none;
+        }
+    body
+        div#splash
+            div#splashText Loading...
+        div#signInButton.g-signin2

@@ -1,0 +1,37 @@
+html(lang="en")
+	head
+		title VR Scribble
+		script(src="https://apis.google.com/js/platform.js" async defer)
+		script(src="//connect.facebook.net/en_US/sdk.js" async defer)
+		script(src="../../dev/userArea.js")
+		link(rel="stylesheet" type="text/css" href="../../style/index.css")
+		link(rel="stylesheet" type="text/css" href="../../style/userArea.css")
+		link(rel="icon" href="../../favicon.ico" type="image/x-icon")
+		link(rel="manifest" href="manifest.json")
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1.0")
+		meta(name="google-signin-client_id" content=googleClientId)
+	script.
+		window.vrscribble = {
+			username: "#{username}",
+			userId: #{userId},
+			scribbles: !{JSON.stringify(scribbles)}
+		}
+	body
+		div#header
+			div
+				a(href="../")
+					img(id="logo" src="../../images/logoBlack.png")
+			div#account
+				div#logIn Log In
+				div#logOut Log Out
+				div#userarea userarea
+		div#stats
+			div
+				span#statsUsername #{username}
+				span#editUsername Edit
+			div#scribbleCount #{scribbles.length} Scribble#{plural}
+		div#scribbles
+		div#googleName.accountName
+		div(id="signInButton" class="g-signin2")
+		fb:login-button(scope="public_profile,email,publish_actions,user_photos" onLogin="window.checkLoginState()" id="theFacebookButton" data-size="xlarge")

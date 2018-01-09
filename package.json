@@ -1,0 +1,19 @@
+{
+  "name": "vrscribble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "Dan Ruta",
+  "license": "ISC",
+  "scripts": {
+    "start": "set NODE_ENV=production && node server.js",
+    "devstart": "node server.js dev"
+  },
+  "devDependencies": {
+    "ws": "^1.1.0",
+    "node-fetch": "1.6.1",
+    "mime-types": "2.x.x",
+    "pug": "*",
+    "redis": "2.6.x"
+  }
+}

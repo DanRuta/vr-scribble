@@ -1,0 +1,51 @@
+html(lang="en")
+  head
+    title #{code} - Dan Ruta
+  style.
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        background: url("http://danruta.co.uk/images/wood.jpg") 50% 0 repeat fixed;
+        font-family: Helvetica;
+    }
+
+    #main{
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        width: 1200px;
+        max-width: 100vw;
+        margin: auto;
+        margin: 4vh 0 4vh 0;
+        background-color: white;
+        box-shadow: 0 0 50px 1px rgba(0,0,0,0.5);
+        background-image: url("http://danruta.co.uk/images/splash.png"); 
+        background-repeat: no-repeat;
+    }
+
+    #main > div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    #main > div:nth-child(2) > span:nth-child(1){
+        font-size: 250%;
+    }
+
+    .header{
+        height: 50px;
+        width: 100%;
+        background-color: rgb(50,50,50);
+    }
+  body
+    div#main
+        div.header
+        div 
+            span #{code} 
+            span #{codeDetails}
+        div.header

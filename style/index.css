@@ -1,0 +1,247 @@
+body{
+    margin: 0;
+    font-family: Helvetica;
+    overflow: hidden;
+}
+
+#canvasHolder{
+    position: absolute;
+    pointer-events: none;
+    z-index: 1; 
+}
+
+canvas{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity;
+    transition-duration: 1000ms;
+}
+
+#canvasOverlay {
+    position: absolute;
+    box-shadow: 0 0 200px 15px black inset;
+    height: calc(100vh - 50px);
+    width: 100vw;
+    z-index: 2;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    background-color: #333;
+}
+
+#logo  {
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#spotlightImage {
+    display: none;
+}
+
+#account {
+    display: flex;
+    margin-right: 15px;
+}
+
+#account > div {
+    max-height: 50px;
+    font-size: 2vh;
+    margin: 10px;
+    background-color: #66F;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#account>a {
+    text-decoration: none;
+}
+
+#account > div:hover{
+    background-color: #77F;
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.1)
+}
+
+#userarea, #logIn, #logOut {
+    display: none;
+}
+
+#userarea {
+    margin-right: 10px;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    height: calc(100vh - 50px);
+    width: 100vw;
+}
+
+#mainLogo {
+    /*height: 75px;*/
+    width: 500px;
+    max-width: 97.5vw;
+    margin-bottom: 20px;
+}
+
+#box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    max-height: calc(100vh - 50px);
+    width: 500px;
+    max-width: 100vw;
+    margin-top: 10px;
+    background-color: rgba(50,50,50,0.7);
+}
+
+#inputButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+button{
+    height: 40px;
+    width: 200px;
+    font-size: 135%;
+    cursor: pointer;
+}
+
+#instructions {
+    margin-top: 25px;
+    min-height: 30px;
+}
+
+input{
+    height: 45px;
+    font-size: 175%;
+    text-align: center;
+    margin: 20px;
+}
+
+#subPanel {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 500px;
+    max-width: 100vw;
+    margin-top: 10px;
+    background-color: rgba(50,50,50,0.7);
+    /*opacity: 0;*/
+}
+
+#message {
+    display: none;
+    color: white;
+    font-size: 125%;
+    text-align: center;
+}
+
+#appButtons {
+    display: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#authItems {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+/* Instructions */
+#instructionsContent {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+}
+
+.instructionsSection {
+    width: 90% !important;
+    margin-bottom: 10px;
+}
+
+.instructionsSection > span {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.instructionsSection > p {
+    margin-top: 5px;
+}
+
+.voice {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.voice > div:nth-child(1){
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+    margin-right: 10px;
+}
+.voice > div:nth-child(2){
+    width: 75%;
+    text-align: left;
+}
+
+#spotlightData {
+    position: absolute;
+    height: 15px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(50,50,50,0.7);
+    bottom: 0;
+}
+
+#spotlightData > a {
+    color: #CCC;
+}
+
+#instructions, #create, #join, #viewer, #controller {
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    color: #222;
+}
+
+@media screen and (max-height: 505px){
+
+    #mainLogo {
+        display: none !important;
+    }
+    #spotlightData {
+        left: 10px;
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name" : "VR Scribble",
+    "short_name" : "VR Scribble",
+    "icons" : [{
+        "src": "images/Logo.png",
+        "sizes": "512x512"
+    }],
+    "orientation": "portrait-primary",
+    "start_url": "https://vrscribble.danruta.co.uk",
+    "background_color": "#EAEAEA",
+    "theme_color": "#333333",
+    "display": "standalone",
+    "description": "VR Scribble is a browser based multiplayer virtual reality scribbling app.",
+    "gcm_sender_id": "103953800507"
+}

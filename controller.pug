@@ -1,0 +1,34 @@
+html
+    head
+        title VR Scribble Controller
+        script(src="https://apis.google.com/js/platform.js" async defer)
+        script(src="//connect.facebook.net/en_US/sdk.js" async defer)
+        meta(name="google-signin-client_id" content=googleClientId)
+        link(rel="stylesheet" type="text/css" href="style/controller.css")
+        script(src="./lib/NoSleep.min.js")
+        script(src="./dev/control.js")
+    body
+        div#main
+            div#drawingArea
+                div Tap in here to draw
+                div#coordsBox
+                div#commandList
+                    div Available voice commands
+                    div#options Options
+                    div#close Close
+                    div#undo Undo
+                    div#redo Redo
+                    div#colour Colour
+                    div#opacity Opacity
+                    div#thickness Thickness
+                    div#screenshot Screenshot
+                div#userDetails
+                    div
+                        span Name:
+                        span#usernameDisplay
+                    div
+                        span Room:
+                        span#roomNameDisplay
+            div#voiceButton
+                img(src="/images/microphone.png")
+            div#signInButton.g-signin2

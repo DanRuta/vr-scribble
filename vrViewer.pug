@@ -1,0 +1,25 @@
+html(lang="en")
+	head
+		title VR Scribble
+		script(src="../../../lib/webvr-polyfill.js")
+		script(src="../../../lib/three.min.js")
+		script(src="../../../lib/VREffect.js")
+		script(src="../../../lib/vr-samples-util.js")
+		script(src="../../../lib/OrbitControls.js")
+		script(src="../../../lib/VRControls.js")
+		script(src="../../../lib/DeviceOrientationControls.js")
+		script(src="../../../dev/vrViewer.js")
+	script.
+		window.vrscribble = {
+			imageBase64: "#{imageBase64}"
+		}
+	style.
+		body{
+			margin: 0;
+			background-color: black;
+		}
+		#vr-sample-button-container {
+			top: 10px;
+			right: auto !important;
+		}
+	body

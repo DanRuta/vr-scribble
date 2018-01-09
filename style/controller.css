@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    font-size: 5vh;
+    font-family: Tahoma;
+}
+
+#drawingArea {
+    height: 90vh;
+    width: 100vw;
+    background-color: black;
+    color: rgba(50,50,50,0.8);
+    font-weight: bold;
+    text-shadow: 0 0 rgba(255,255,255,0.3);
+    /*overflow: scroll;*/
+}
+
+#drawingArea > div:nth-child(1) {
+    height: 10vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#coordsBox {
+    height: 10vh;
+    width: 100vw;
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 3vh;
+}
+
+#commandList {
+    display: flex;
+    flex-direction: column;
+    font-size: 2vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#commandList > div:nth-child(1){
+    font-size: 2.5vh;
+    margin: 1vh;
+}
+
+#userDetails {
+    height: 7.5vh;
+    width: 100vw;
+    margin-top: 18vh;
+    font-size: 2.5vh;
+    color: rgba(255,255,255,0.5);
+}
+#userDetails > * {
+    margin: 1vw;
+}
+
+#userDetails > div > span:nth-child(1) {
+    width: 15vw;
+    margin-right: 2.5vw;
+}
+
+#usernameDisplay, #roomNameDisplay{
+    height: 4vh;
+    width: 30vw;
+    font-size: 2.5vh;
+    color: rgba(255,255,255,0.3);
+    border: none;
+    text-align: center;
+}
+
+#voiceButton {
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    box-shadow: 0 5vh 10vh 0.5vh black inset, 0 1vh 2vh 1vh black;
+}
+
+#signInButton{
+    display: none;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dev Controller</title>
+	<script src="/src/devController.js"></script>
+</head>
+<body>
+
+	Name<input id="nameInput" type="text" value="username1">
+	Room <input id="roomID" type="text" value="room1">
+	is drawing <input type="checkbox" id="isDrawingCheckbox"><br><br>
+	<canvas id="control" style="border:1px solid black" height="360" width="450"></canvas><br>
+
+	<input id="alphaSlider" type="range" value="180" min="-90" max="360"><span id="alphaSliderOutput"></span><br>
+	<input id="betaSlider" type="range" value="0" min="-180" max="180"><span id="betaSliderOutput"></span><br>
+
+	<button id="mouseDownButton">Mouse Down</button>
+	<button id="mouseUpButton">Mouse Up</button>
+	<button id="optionsBTN">options</button>
+	<button id="voiceControl">Voice</button>
+</body>
+</html>

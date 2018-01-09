@@ -1,0 +1,97 @@
+html
+    head
+        title VR Scribble
+        script(src="https://apis.google.com/js/platform.js" async defer)
+        script(src="//connect.facebook.net/en_US/sdk.js" async defer)
+        script(src="./lib/three.min.js")
+        script(src="./dev/index.js")
+
+        link(rel="stylesheet" type="text/css" href="./style/index.css")
+        link(rel="icon" href="favicon.ico" type="image/x-icon")
+        link(rel="manifest" href="manifest.json")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(charset="UTF-8")
+        meta(name="google-signin-client_id" content=googleClientId)
+body
+    div#header
+        a(href="")
+            img(id="logo" src="./images/logoBlack.png")
+        div#account
+            div#logIn Log in
+            div#logOut Log Out
+            div#userarea
+    div#canvasHolder
+        div#canvasOverlay
+    div#main
+        img(id="mainLogo" src="./images/logoWhite.png")
+        div#box
+            button#instructions Show Instructions
+            div#instructionsContent
+                div.instructionsSection VR Scribble is a web based Virtual Reality multiplayer scribbling app. It makes use of just two phones, to serve as the VR display, and controller. A headset like the Gear VR to mount one of the phones into is required, though there are plenty of cheap alternatives like Google's Cardboard which also work.
+                div.instructionsSection
+                    span Rooms and profiles
+                    p A room system is used to keep everyone together, and user profiles are used to identify everyone and their controllers.
+                    p Once logged in enter a room name to join or create.
+                div.instructionsSection
+                    span Need two phones
+                    p With one phone, join the viewer page, and the other the controller page. The viewer will show you the VR stuff, and the other is used to draw with. If you see your cursor moving around, everything is working ok.
+                div.instructionsSection
+                    span Move phone to draw
+                    p To start drawing, tap on the controller phone's screen. Hold while moving it around to draw.
+                div.instructionsSection
+                    span Use voice commands
+                    p Make sure you tap accept for voice input (chrome may prompt you for it, first). Speak clearly into the microphone. The available voice commands are listed here, at the bottom.
+                div.instructionsSection
+                    span The options menu
+                    p Once the options bar is brought up, the controller phone's movements are used to navigate left and right through the options, and up or down through sliders
+                div.instructionsSection
+                    span User area
+                    p Here you can find the screenshots taken from the options menu. You can delete, download, and share to Facebook from here. You can also click the edit pencil to continue where you or someone else left off.
+                div.instructionsSection
+                    span The voice commands
+                    p
+                        div.voice
+                            div Options
+                            div Brings up the options bar, or closes it
+                        div.voice
+                            div Close
+                            div Returns you to drawing by closing the options bar and/or the colour sphere, including sliders
+                        div.voice
+                            div Undo
+                            div Undo your last drawn stroke
+                        div.voice
+                            div Redo
+                            div Redo your undo strokes
+                        div.voice
+                            div Colour
+                            div Brings up the colour sphere
+                        div.voice
+                            div Opacity
+                            div Brings up the opacity slider
+                        div.voice
+                            div Thickness
+                            div Brings up the thickness slider
+                        div.voice
+                            div Screenshot
+                            div Saves a screenshot of the canvas into the user area
+
+
+            input(type="text" id="room" placeholder="Enter room name")
+            div#inputButtons
+                button#join Join
+                button#create Create
+        div#subPanel
+            div#message Room does not exist. Why not create it?
+            div#appButtons
+                button#viewer Viewer
+                button#controller Controller
+            div#authItems
+                div#signInButton.g-signin2
+        div#spotlightData Spotlight
+            a(href="./users/"+spotlightUsernameUrl+"/"+spotlightIndex) scribble
+            |  by
+            a(href="./users/"+spotlightUsernameUrl)  #{spotlightUsername}
+    script.
+        window.vrscribble = {
+            spotlightImageBase64: "#{spotlightImageBase64}"
+        }
