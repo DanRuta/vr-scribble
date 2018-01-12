@@ -88,10 +88,10 @@ This primary panel contains all the options available:
 A user can open this panel by using the appropriate voice command into their controller. Once this panel is open, the user moves between the options by moving their controller left and right (as they would when moving the cursor, which is now disabled).
 
 The menu being opened:
-<img src="readme images/menu.png">
+<img width="100%" src="readme images/menu.png">
 
 Another option selected by moving the cursor right:
-<img src="readme images/menuOption.png">
+<img width="100%" src="readme images/menuOption.png">
 
 They can select an option by tapping their controller, like clicking. When selecting Undo/Redo, the strokes are done/undone from the canvases. The user can close the menu by using the voice command. When selecting the screenshot option, the menu will close, and the screenshot is taken, as indicated by a toast message (see below). The clear option works the same. The colour option will bring up the colour sphere (see below). The opacity and thickness options will bring up the secondary panel.
 
@@ -99,36 +99,36 @@ They can select an option by tapping their controller, like clicking. When selec
 This panel is used to complement the primary panel, with more control upon the action taken. It is used for the opacity and thickness options.
 
 Opacity:
-<img src="readme images/opacityPanel.png">
+<img width="100%" src="readme images/opacityPanel.png">
 
 Thickness:
-<img src="readme images/thicknessPanel.png">
+<img width="100%" src="readme images/thicknessPanel.png">
 
 Once this panel is up, the user can move their controller up or down to change the value of the sliders. They can either click once done, or they can do it while the cursor is pressed down, letting go once they are happy. The cursor is automatically updated with changes (see below)
 
-<img src="readme images/thicknessPanel2.png">
+<img width="100%" src="readme images/thicknessPanel2.png">
 
 #### Toast
 This is a little panel that appears in the bottom half of the user’s sight to indicate when something is happening, eg someone connects, your connection status, and certain user actions. For example:
 
-<img src="readme images/toast1.png">
-<img src="readme images/toast2.png">
-<img src="readme images/toast3.png">
-<img src="readme images/toast4.png">
-<img src="readme images/toast5.png">
-<img src="readme images/toast6.png">
+<img width="100%" src="readme images/toast1.png">
+<img width="100%" src="readme images/toast2.png">
+<img width="100%" src="readme images/toast3.png">
+<img width="100%" src="readme images/toast4.png">
+<img width="100%" src="readme images/toast5.png">
+<img width="100%" src="readme images/toast6.png">
 
 #### Colour
 When selecting the colour option in the primary panel, the options menu is closed, and the user is surrounded in a sphere containing every possible colour that can be used. The higher they look, the brighter it is, the lower they look, the darker it is. The user can point their cursor to the colour they want to pick. A rough estimation of the colour that will be picked when selecting, is reflected in the circle inside the cursor. To pick the colour, the user taps their controller, as if drawing a dot, after which the colour over which the cursor is hovering is picked, the colour canvas is hidden and drawing is resumed. To cancel, the user can exit using voice commands.
 
 Looking straight:
-<img src="readme images/colour1.png">
+<img width="100%" src="readme images/colour1.png">
 
 Looking up:
-<img src="readme images/colour2.png">
+<img width="100%" src="readme images/colour2.png">
 
 Looking down:
-<img src="readme images/colour3.png">
+<img width="100%" src="readme images/colour3.png">
 
 
 #### Cursor
