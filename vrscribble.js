@@ -191,7 +191,8 @@ const tokenSignin = (request, response, {authenticator, token, roomName}) => {
                 username : usernameCount>0 ? name+usernameCount : name,
                 authUserID: id,
                 email: undefined,
-                timesLoggedIn: 1
+                timesLoggedIn: 1,
+                screenshotsTaken: 0
             }
 
 
@@ -258,14 +259,14 @@ const saveScreenshot = (request, response, {username, base64Screenshot, authenti
 
             if (usersData[userIndex].authUserID==id) {
                 userIndexValue = userIndex
-                screenshotCount = usersData[userIndex].meta.stats.screenshotsTaken
+                screenshotCount = usersData[userIndex].screenshotsTaken
             }
         }
 
         if (userIndexValue) {
 
-            const imageBuffer = new Buffer(base64Screenshot, "base64"),
-            imagePath = `./screenshots/${userIndexValue}/${screenshotCount}.jpg`
+            const imageBuffer = new Buffer(base64Screenshot, "base64")
+            const imagePath = `./screenshots/${userIndexValue}/${screenshotCount}.jpg`
 
             try {
                 fs.mkdirSync(`./screenshots/${userIndexValue}`)
@@ -288,7 +289,7 @@ const saveScreenshot = (request, response, {username, base64Screenshot, authenti
 
             sendData({request, response})
 
-            usersData[userIndexValue].meta.stats.screenshotsTaken++
+            usersData[userIndexValue].screenshotsTaken++
             fs.writeFile("./usersData.json", JSON.stringify(usersData, null, 4),()=>{})
         }
     })
