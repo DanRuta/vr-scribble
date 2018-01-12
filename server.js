@@ -99,7 +99,6 @@ for (let postRoute in vrScribble.post) {
 
 getHandlers.push(vrScribble.get)
 postHandlers.push(vrScribble.post)
-WebSocketHandlers["vrscribble"] = vrScribble.ws
 
 
 // Compile all the request handlers
@@ -220,9 +219,6 @@ wsServers.forEach(wss => {
             return {clients: prev.clients.concat(curr.clients)}
         }, {clients: []})
 
-        // Route the connection and further messages to its project file, only if registered
-        if (WebSocketHandlers.hasOwnProperty(subDomain)) {
-           WebSocketHandlers[subDomain](connection, clients.clients)
-        }
+        vrScribble.ws(connection, clients.clients)
     })
 })

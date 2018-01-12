@@ -277,8 +277,9 @@ const init = () => {
 
             currentUser.cursorTexture.needsUpdate = true
 
-            if (currentUser.isDrawing)
+            if (currentUser.isDrawing) {
                 currentUser.stroke.render(strokeCanvasContext)
+            }
 
             // Lerp the user's cursor sphere rotation
             currentUser.lerpCursor()
