@@ -57,12 +57,12 @@ This is the main function, which executes every frame. A number of things happen
 
 1. Stroke canvas is cleared (for re-rendering with new content. New stroke content does not just get added on top, and HAS to be re-drawn, to allow opacity to work)
 2. For each user:
-    a. Render their stroke data to the stroke canvas
-    b. Lerp users’ cursor (see notes)
-    c. Update the buffer canvas with new stroke items
-    d. Add/remove from buffer canvas stroke array any undone/redone strokes (for rendering, see 4)
-    e. De-queue any stokes in the user’s strokeQueue (things that got moved to the buffer canvas)
-    f. Save a screenshot, and post it to the server, if requested
+- Render their stroke data to the stroke canvas
+- Lerp users’ cursor (see notes)
+- Update the buffer canvas with new stroke items
+- Add/remove from buffer canvas stroke array any undone/redone strokes (for rendering, see 4)
+- De-queue any stokes in the user’s strokeQueue (things that got moved to the buffer canvas)
+- Save a screenshot, and post it to the server, if requested
 3. Clear everything, in every canvas, if all the users voted to reset the canvas (see notes)
 4. Clear and re-render the buffer canvas stroke content, if there have been changes in 2c
 5. Set each texture to needing to update (a Threejs thing)
